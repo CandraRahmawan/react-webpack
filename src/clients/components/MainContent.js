@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 import {Collapse} from 'antd';
+import Concept from './Concept';
+import EntryPoint from './EntryPoint';
 
 const Panel = Collapse.Panel;
 
-export default class Contents extends Component {
+export default class MainContent extends Component {
   render() {
     return (
       <div className="content-wrapper">
         <Collapse accordion>
           <Panel header="Concept" key="1">
-            <p>Concept is ...</p>
+            <Concept/>
           </Panel>
           <Panel header="Entry Point" key="2">
-            <p>Entry Point is ...</p>
+            <EntryPoint/>
           </Panel>
           <Panel header="Output" key="3">
             <p>Output is ...</p>

@@ -3,9 +3,17 @@
 }
 
 .container {
-  padding: 15px;
+  padding: 50px;
 }
 
 .container > h2 {
-  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+.wrapper-image {
+  text-align: center;
+}
+
+.wrapper-image > img {
+  height: 400px;
 }
