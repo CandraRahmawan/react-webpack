@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -20,10 +21,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}),
     new MiniCssExtractPlugin({
-      filename: "styles.[hash].css",
+      filename: "styles.[hash].css"
     }),
-    new OptimizeCSSAssetsPlugin({})
   ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
   devServer: {
     port: 7000
   }
