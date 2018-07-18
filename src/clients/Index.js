@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {render} from 'react-dom';
+import Contents from './components/Contents';
+import '../assets/styles.scss';
 
 class Index extends Component {
   render() {
     return (
-      <div>
-        <h1>Webpack 4</h1>
+      <div className="container">
+        <h2>Build your assets in ReactJS with Webpack 4</h2>
+        <Contents/>
       </div>
     )
   }
