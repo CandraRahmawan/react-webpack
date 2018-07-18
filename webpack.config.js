@@ -9,13 +9,13 @@ module.exports = {
   },
   module: {
     rules: [
-      {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/}
+      {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/},
+      {test: /\.scss$/, use: ['style-loader', 'css-loader']}
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'})
   ],
-  mode: 'development',
   devServer: {
     port: 7000
   }

@@ -11,6 +11,7 @@ Technology :
 run `yarn install` first to install depedencies.
 
 Running :
-`yarn start`
+- `yarn start:dev` for running development mode
+- `yarn start:prod` for running production mode
 
 running at http://localhost:7000/
