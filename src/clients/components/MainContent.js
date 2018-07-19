@@ -5,6 +5,7 @@ import EntryPoint from './entry-point';
 import Output from './output';
 import Mode from './mode';
 import Loaders from './loaders';
+import Plugins from './plugins';
 
 const Panel = Collapse.Panel;
 
@@ -29,7 +30,7 @@ export default class MainContent extends Component {
             <Loaders/>
           </Panel>
           <Panel header="Plugins" key="6">
-            <p>Plugins is ...</p>
+            <Plugins/>
           </Panel>
           <Panel header="DevServer" key="7">
             <p>DevServer is ...</p>

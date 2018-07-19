@@ -1,0 +1,15 @@
+module.exports = {
+  module: {
+    rules: [
+      {test: /\.s?[c]ss$/, use: [MiniCssExtractPlugin.loader, 'css-loader']}
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.[hash].css" //or chunkFilename: "styles.[hash].css"
+    })
+  ]
+};
+
+//Async Chunk => chunkFilename e.g import(/* webpackChunkName: "foo" */ './file.css') => foo.css
+//Sync Chunk (e.g an Entrypoint) => filename => e.g import styles from './file.css' (in entry.js) => entry.css

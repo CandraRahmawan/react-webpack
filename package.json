@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start:dev": "webpack-dev-server --mode=development",
-    "start:prod": "webpack-dev-server --mode=production",
+    "start:dev": "webpack-dev-server --mode=development --progress",
+    "start:prod": "webpack-dev-server --mode=production --progress",
     "webpack-stats": "webpack --profile --json > stats.json"
   },
   "devDependencies": {

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>ReactJS with Webpack 4</title>
+<meta name="description" content="build your assets using webpack 4"><meta name="keyword" content="webpack 4, ReactJS"><link rel="shortcut icon" href="favicon.ico"></head>
+<body>
+<div id="app"></div>
+</body>
+</html>

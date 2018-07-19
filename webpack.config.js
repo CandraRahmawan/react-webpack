@@ -23,7 +23,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      title: 'ReactJS with Webpack 4',
+      favicon: './src/assets/favicon.ico',
+      minify: true,
+      meta: {
+        description: 'build your assets using webpack 4',
+        keyword: 'webpack 4, ReactJS'
+      }
+    }),
     new MiniCssExtractPlugin({
       filename: "styles.[hash].css"
     }),
