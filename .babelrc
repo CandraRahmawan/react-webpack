@@ -1,7 +1,8 @@
 {
   "presets": [
     "env",
-    "react"
+    "react",
+    "stage-1"
   ],
   "plugins": [
     [
@@ -10,6 +11,17 @@
         "libraryName": "antd",
         "libraryDirectory": "es",
         "style": "css"
+      }
+    ],
+    [
+      "prismjs",
+      {
+        "languages": [
+          "javascript",
+          "diff"
+        ],
+        "theme": "tomorrow",
+        "css": true
       }
     ]
   ]

@@ -18,7 +18,8 @@ module.exports = {
     rules: [
       {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/},
       {test: /\.s?[c]ss$/, use: [MiniCssExtractPlugin.loader, 'css-loader']},
-      {test: /\.png$/, use: 'file-loader'}
+      {test: /\.png$/, use: 'file-loader'},
+      {test: /\.txt$/, use: 'raw-loader'}
     ]
   },
   plugins: [
@@ -27,7 +28,7 @@ module.exports = {
       filename: "styles.[hash].css"
     }),
     new MinifyPlugin(),
-    new BundleAnalyzerPlugin()
+    //new BundleAnalyzerPlugin()
   ],
   optimization: {
     splitChunks: {

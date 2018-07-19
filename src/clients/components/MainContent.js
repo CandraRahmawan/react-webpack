@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {Collapse} from 'antd';
-import Concept from './Concept';
-import EntryPoint from './EntryPoint';
+import Concept from './concept';
+import EntryPoint from './entry-point';
+import Output from './output';
+import Mode from './mode';
 
 const Panel = Collapse.Panel;
 
@@ -17,10 +19,10 @@ export default class MainContent extends Component {
             <EntryPoint/>
           </Panel>
           <Panel header="Output" key="3">
-            <p>Output is ...</p>
+            <Output/>
           </Panel>
           <Panel header="Mode" key="4">
-            <p>Mode is ...</p>
+            <Mode/>
           </Panel>
           <Panel header="Loaders" key="5">
             <p>Loaders is ...</p>

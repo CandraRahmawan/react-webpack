@@ -1,0 +1,9 @@
+module.exports = {
+  entry: {
+    app: './src/app.js',
+    vendors: './src/vendors.js',
+    homepage: './src/homepage.js',
+    profile: './src/profile.js',
+    contactUs: './src/contactUs.js'
+  }
+};
