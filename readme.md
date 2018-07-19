@@ -7,6 +7,7 @@ Tools :
 Technology :
 1. React 16.4
 2. Webpack 4
+3. Antd 3.6
 
 run `yarn install` first to install depedencies.
 
