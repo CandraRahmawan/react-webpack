@@ -6,6 +6,8 @@ import Output from './output';
 import Mode from './mode';
 import Loaders from './loaders';
 import Plugins from './plugins';
+import CodeSplitting from './code-splitting';
+import DevServer from './dev-server';
 
 const Panel = Collapse.Panel;
 
@@ -32,8 +34,11 @@ export default class MainContent extends Component {
           <Panel header="Plugins" key="6">
             <Plugins/>
           </Panel>
-          <Panel header="DevServer" key="7">
-            <p>DevServer is ...</p>
+          <Panel header="Code Splitting" key="7">
+            <CodeSplitting/>
+          </Panel>
+          <Panel header="DevServer" key="8">
+            <DevServer/>
           </Panel>
         </Collapse>
       </div>

@@ -1,0 +1,13 @@
+module.exports = {
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  }
+};
+
+//started ==>
+
+http://localhost:9000/
+webpack output is served from /build/
+Content not from webpack is served from /path/to/dist/

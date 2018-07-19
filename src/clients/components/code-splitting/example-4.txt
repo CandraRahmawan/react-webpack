@@ -1,0 +1,16 @@
+Hash: ac2ac6042ebb4f20ee54
+Version: webpack 4.7.0
+Time: 316ms
+                          Asset      Size                 Chunks             Chunk Names
+              another.bundle.js  5.95 KiB                another  [emitted]  another
+                index.bundle.js  5.89 KiB                  index  [emitted]  index
+vendors~another~index.bundle.js   547 KiB  vendors~another~index  [emitted]  vendors~another~index
+Entrypoint index = vendors~another~index.bundle.js index.bundle.js
+Entrypoint another = vendors~another~index.bundle.js another.bundle.js
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 489 bytes {vendors~another~index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {vendors~another~index} [built]
+[./src/another-module.js] 88 bytes {another} [built]
+[./src/index.js] 86 bytes {index} [built]
+    + 1 hidden module
+
+// vendors~another~index.bundle.js from node_modules
