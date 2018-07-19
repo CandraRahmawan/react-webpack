@@ -1,0 +1,1 @@
+yarn install -D style-loader css-loader raw-loader file-loader babel-loader
