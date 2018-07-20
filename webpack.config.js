@@ -36,8 +36,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.[hash].css"
     }),
-    new MinifyPlugin(),
-    //new BundleAnalyzerPlugin()
+    new MinifyPlugin()
   ],
   optimization: {
     splitChunks: {

@@ -9,7 +9,7 @@
   "scripts": {
     "start:dev": "webpack-dev-server --mode=development --progress",
     "start:prod": "webpack-dev-server --mode=production --progress",
-    "webpack-stats": "webpack --profile --json > stats.json"
+    "webpack-stats": "webpack --profile --json > stats.json --progress && webpack-bundle-analyzer stats.json"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
