@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Collapse} from 'antd';
+import React, { Component } from 'react';
+import { Collapse } from 'antd';
 import Concept from './concept';
 import EntryPoint from './entry-point';
 import Output from './output';
@@ -17,31 +17,31 @@ export default class MainContent extends Component {
       <div className="content-wrapper">
         <Collapse accordion>
           <Panel header="Concept" key="1">
-            <Concept/>
+            <Concept />
           </Panel>
           <Panel header="Entry Point" key="2">
-            <EntryPoint/>
+            <EntryPoint />
           </Panel>
           <Panel header="Output" key="3">
-            <Output/>
+            <Output />
           </Panel>
           <Panel header="Mode" key="4">
-            <Mode/>
+            <Mode />
           </Panel>
           <Panel header="Loaders" key="5">
-            <Loaders/>
+            <Loaders />
           </Panel>
           <Panel header="Plugins" key="6">
-            <Plugins/>
+            <Plugins />
           </Panel>
           <Panel header="Code Splitting" key="7">
-            <CodeSplitting/>
+            <CodeSplitting />
           </Panel>
           <Panel header="DevServer" key="8">
-            <DevServer/>
+            <DevServer />
           </Panel>
         </Collapse>
       </div>
-    )
+    );
   }
 }

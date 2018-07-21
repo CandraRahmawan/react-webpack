@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import renderSyntakHighlight from '../../helpers/renderSyntakHighlight';
 import Prism from 'prismjs';
 import html_plugin_1 from './html-plugin-1.txt';
@@ -19,16 +19,19 @@ export default class Index extends Component {
         {renderSyntakHighlight(html_plugin_2)}
         <b>Output</b>
         {renderSyntakHighlight(html_plugin_3, Prism.languages.markup)}
-        <div className="separator"/>
+        <div className="separator" />
         <h3>MiniCssExtractPlugin</h3>
         <b>Install</b>
         {renderSyntakHighlight(extract_css_1)}
         <b>Usage</b>
         {renderSyntakHighlight(extract_css_2)}
-        <b>This plugin should be used only on production builds without style-loader in the loaders chain, especially if
-          you want to have HMR in development.</b>
+        <b>
+          This plugin should be used only on production builds without
+          style-loader in the loaders chain, especially if you want to have HMR
+          in development.
+        </b>
         {renderSyntakHighlight(extract_css_3)}
       </div>
-    )
+    );
   }
 }
