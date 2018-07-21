@@ -1,26 +1,26 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const MinifyPlugin = require("babel-minify-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/clients/Index.js'
+    app: './src/clients/Index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js'
+    filename: '[name].[hash].js',
   },
   module: {
     rules: [
-      {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/},
-      {test: /\.s?[c]ss$/, use: [MiniCssExtractPlugin.loader, 'css-loader']},
-      {test: /\.png$/, use: 'file-loader'},
-      {test: /\.txt$/, use: 'raw-loader'}
-    ]
+      { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.s?[c]ss$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
+      { test: /\.png$/, use: 'file-loader' },
+      { test: /\.txt$/, use: 'raw-loader' },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,13 +30,14 @@ module.exports = {
       minify: true,
       meta: {
         description: 'build your assets using webpack 4',
-        keyword: 'webpack 4, ReactJS'
-      }
+        keyword: 'webpack 4, ReactJS',
+      },
     }),
+    new CleanWebpackPlugin(['dist', '__coverage__', 'stats.json']),
     new MiniCssExtractPlugin({
-      filename: "styles.[hash].css"
+      filename: 'styles.[hash].css',
     }),
-    new MinifyPlugin()
+    new MinifyPlugin(),
   ],
   optimization: {
     splitChunks: {
@@ -45,12 +46,12 @@ module.exports = {
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
-        parallel: true
+        parallel: true,
       }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
   devServer: {
-    port: 7000
-  }
+    port: 7000,
+  },
 };
