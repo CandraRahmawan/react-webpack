@@ -9,6 +9,8 @@ Technology :
 2. Webpack 4
 3. Antd 3.6
 4. PrismJS 1.15
+5. Prettier
+6. Jest
 
 run `yarn install` first to install depedencies.
 
@@ -17,3 +19,10 @@ Running :
 - `yarn start:prod` for running production mode
 
 running at http://localhost:7000/
+
+Webpack Stats : 
+- `yarn build:stats` for Analyzing build statistics
+
+Testing :
+- `yarn test` result test with coverage
+- `yarn test:watch` for watching testing unit without coverage

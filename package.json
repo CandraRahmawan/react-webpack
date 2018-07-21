@@ -10,7 +10,7 @@
     "prettier": "prettier --single-quote --trailing-comma es5 --write src/**/*.js",
     "start:dev": "webpack-dev-server --mode=development --progress",
     "start:prod": "webpack-dev-server --mode=production --progress",
-    "webpack-stats": "webpack --profile --json > stats.json --progress && webpack-bundle-analyzer stats.json",
+    "build:stats": "webpack --profile --json > stats.json --progress && webpack-bundle-analyzer stats.json",
     "test": "jest --config=test/config.js",
     "test:watch": "jest -t --config=test/config.js --watch --collectCoverage=false"
   },
