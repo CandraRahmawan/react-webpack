@@ -3,3 +3,4 @@
 /dist
 stats.json
 /__coverage__
+/src/**/**/__snapshots__
